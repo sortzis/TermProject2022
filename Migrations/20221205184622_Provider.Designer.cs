@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TermProject.Models;
 
@@ -11,9 +12,11 @@ using TermProject.Models;
 namespace TermProject.Migrations
 {
     [DbContext(typeof(ShowContext))]
-    partial class ShowContextModelSnapshot : ModelSnapshot
+    [Migration("20221205184622_Provider")]
+    partial class Provider
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

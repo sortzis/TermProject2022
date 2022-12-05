@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TermProject.Models
 {
@@ -17,6 +18,9 @@ namespace TermProject.Models
         [Required(ErrorMessage = "Please enter a number for stars.")]
         [Range(1, 10, ErrorMessage = "Stars must be between 1 and 10.")]
         public double? Rating { get; set; }
+
+        [ForeignKey("ProviderId")]
+        public string ProviderId { get; set; }
 
     }
 }
