@@ -9,6 +9,7 @@ namespace TermProject.Models
         public int ShowId { get; set; }
 
         [Required(ErrorMessage = "Please enter a title.")]
+        [RegularExpression("^[a - zA - Z0 - 9_] *$)", ErrorMessage = "Title must be alphanumeric")]
         public string? Title { get; set; }
 
         [Required(ErrorMessage = "Please enter a year for release date.")]
